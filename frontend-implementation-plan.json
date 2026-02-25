@@ -1,0 +1,175 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "ProfessorConnect – Academic Job Portal Website Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Implement multi-page React frontend with client-side routing, navigation bar with brand name and links, and footer with copyright text",
+      "acceptanceCriteria": [
+        "Navigation bar is present on all pages with brand name and page links",
+        "Client-side routing works for all four pages without full reload",
+        "Footer with the specified text appears on every page",
+        "Layout is fully mobile responsive"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Set up React Router with routes for Home (/), Jobs (/jobs), About (/about), and Contact (/contact). Create a shared layout component that renders the navigation bar at the top and footer at the bottom, with an outlet for page content in between."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create a Layout component that wraps all pages. Include a navigation bar displaying 'ProfessorConnect' brand name on the left (with logo once generated) and navigation links (Home, Jobs, About, Contact) on the right. Include a footer displaying '© 2026 ProfessorConnect. All rights reserved.' Ensure the layout is fully mobile responsive with a hamburger menu on smaller screens."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create a Navigation component for the top navigation bar. Display the ProfessorConnect logo (from frontend/public/assets/generated/professor-connect-logo.dim_128x128.png once generated) and brand name on the left. Display navigation links (Home, Jobs, About, Contact) on the right with proper routing. Implement a mobile-responsive hamburger menu for small screens."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create a Footer component displaying the text '© 2026 ProfessorConnect. All rights reserved.' in a centered, styled footer bar. Use the professional academic color scheme (navy/dark blue, white, dark gray)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build Home page with hero section, key features section, and highlights strip",
+      "acceptanceCriteria": [
+        "Hero section shows brand name, tagline, and a CTA button",
+        "Key features section displays at least three feature cards",
+        "Page communicates the platform's academic focus clearly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "create",
+          "description": "Create the Home page with three main sections: (1) Hero section with 'ProfessorConnect' as the primary heading, 'Find the Latest Assistant Professor Jobs in Engineering and Science' as the tagline, a short explanation paragraph, and a prominent 'Browse Jobs' CTA button that navigates to /jobs. Use the hero background image from frontend/public/assets/generated/hero-background.dim_1440x600.png as the hero section background. (2) A 'How It Works' or key features section with three feature cards highlighting 'Latest Faculty Job Listings', 'Easy Job Search', and 'Centralized Academic Job Portal'. (3) A brief stats or highlights strip showing placeholder numbers for live listings and institutes covered. Ensure all text remains legible over the hero background image."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build Jobs page that fetches job listings from backend, displays them in a card grid, and provides real-time search and filter functionality",
+      "acceptanceCriteria": [
+        "Jobs page loads and displays all listings from the backend",
+        "Each card shows all required fields and a working Apply Now button",
+        "Search bar filters results by text in real time",
+        "Dropdown filters for Institute, Department, Location, and Position Type work correctly",
+        "Combining search and filters narrows results correctly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Jobs.tsx",
+          "operation": "create",
+          "description": "Create the Jobs page that fetches all job listings from the backend using the getAllJobs() method from the backend interface. Display jobs in a responsive card grid layout. Each job card must show: institute name, position title, department, location, application deadline, and an 'Apply Now' button that opens the applyUrl in a new tab. Include a search bar for free-text filtering across institute/department/position fields. Include dropdown filters for Institute, Department, Location, and Position Type. Implement real-time client-side filtering and search without page reload. When search and filters are combined, apply both constraints to narrow results correctly. Handle loading and error states appropriately."
+        },
+        {
+          "path": "frontend/src/components/JobCard.tsx",
+          "operation": "create",
+          "description": "Create a JobCard component that displays a single job listing with all required fields: institute name, position title, department, location, and application deadline. Include an 'Apply Now' button that opens the job's applyUrl in a new browser tab. Style the card with subtle shadows and the professional academic color scheme (navy/dark blue, white, dark gray). Ensure the card is mobile responsive."
+        },
+        {
+          "path": "frontend/src/components/JobFilters.tsx",
+          "operation": "create",
+          "description": "Create a JobFilters component that provides a search bar for free-text search and dropdown filters for Institute, Department, Location, and Position Type. The component should accept a callback function to notify the parent Jobs page of filter/search changes. Ensure the UI is mobile responsive and uses the academic color scheme."
+        },
+        {
+          "path": "frontend/src/hooks/useJobs.ts",
+          "operation": "create",
+          "description": "Create a custom React hook useJobs that fetches job listings from the backend using the getAllJobs() method. Handle loading, error, and success states. Return the job listings array and state indicators. This hook will be used by the Jobs page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build About page with mission, target users, and future vision sections in professional academic tone",
+      "acceptanceCriteria": [
+        "About page contains mission, target users, and future vision sections",
+        "Copy is written in a professional academic tone",
+        "Page layout is clean and readable"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/About.tsx",
+          "operation": "create",
+          "description": "Create the About page with three main sections: (1) Mission section explaining how ProfessorConnect simplifies academic job search for faculty positions. (2) Target users section describing PhD scholars, postdoctoral researchers, academic professionals, and faculty seeking new opportunities. (3) Future vision section describing planned features: AI-powered academic job matching, CV upload, automated job scraping, and personalized notifications. Write all copy in a professional academic tone. Use clean typography, generous whitespace, and the professional academic color scheme. Ensure mobile responsiveness."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Contact page with validated contact form and placeholder contact email",
+      "acceptanceCriteria": [
+        "Contact form has Name, Email, and Message fields",
+        "Form validates that all fields are filled and email format is valid before submission",
+        "On submission a success message is shown",
+        "Placeholder contact email is displayed on the page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Contact.tsx",
+          "operation": "create",
+          "description": "Create the Contact page with a contact form containing Name, Email, and Message fields. Implement client-side validation to ensure all fields are filled and email format is valid before submission. On form submission, display a success confirmation message to the user (no real email delivery required). Display a placeholder contact email (e.g., contact@professorconnect.in) below or beside the form. Use the professional academic color scheme and ensure mobile responsiveness."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Apply cohesive professional academic visual theme across all pages with navy/dark blue, white, and dark gray palette, clean typography, and mobile-first responsive design",
+      "acceptanceCriteria": [
+        "Color scheme consistently uses navy/dark blue, white, and dark gray tones",
+        "Typography is clean and hierarchically structured across all pages",
+        "All pages are fully responsive on mobile, tablet, and desktop",
+        "Cards, buttons, and interactive elements follow a consistent visual style"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS variables and base styles for the professional academic theme. Set primary color palette to navy/dark blue (#1e3a8a or similar), white (#ffffff), and dark gray (#1f2937 or similar). Define clean sans-serif font stack (e.g., Inter, system-ui, sans-serif). Set base typography styles with clear hierarchy (h1, h2, h3, p). Apply generous whitespace and minimal decorative elements. Ensure all global styles support the cohesive visual theme across all pages."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind configuration to include custom color palette for the professional academic theme: primary navy/dark blue, white, and dark gray tones. Add custom font family definitions for clean sans-serif typography. Configure spacing and shadow utilities to support card components with subtle shadows and generous whitespace. Ensure mobile-first responsive breakpoints are properly configured."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Generate and integrate ProfessorConnect logo mark in navigation bar",
+      "acceptanceCriteria": [
+        "Logo image is placed in frontend/public/assets/generated/",
+        "Logo is rendered in the navigation bar beside the brand name",
+        "Logo is legible at small navigation bar sizes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Update the Navigation component to display the ProfessorConnect logo from frontend/public/assets/generated/professor-connect-logo.dim_128x128.png beside the brand name in the navigation bar. Ensure the logo is sized appropriately for the navigation bar (small size) and remains legible. The logo combines a mortarboard cap and magnifier icon in navy blue and white on transparent background."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Generate and integrate hero background illustration for Home page",
+      "acceptanceCriteria": [
+        "Hero background image is placed in frontend/public/assets/generated/",
+        "Image is used as the hero section background on the Home page",
+        "Text in the hero section remains legible over the image"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Update the Home page hero section to use the hero background image from frontend/public/assets/generated/hero-background.dim_1440x600.png as the section background. The image features abstract academic/research-themed graphics with subtle geometric shapes, graduation caps, and science/engineering icons in navy blue and light blue tones. Ensure all hero text (heading, tagline, CTA button) remains fully legible over the background by adding appropriate text shadows, overlays, or contrast adjustments."
+        }
+      ]
+    }
+  ]
+}

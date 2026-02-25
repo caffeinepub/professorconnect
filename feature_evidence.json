@@ -1,0 +1,155 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-a-multi-page-react-frontend-with-client-side-routing-for-four-pages-home-jobs-about-and-contact-the-top-navigation-bar-must-display-the-logo-brand-name-professorconnect-on-the-left-and-navigation-links-home-jobs-about-contact-on-the-right-the-footer-must-display-2026-professorconnect-all-rights-reserved",
+      "featureTitle": "Implement a multi-page React frontend with client-side routing for four pages: Home, Jobs, About, and Contact. The top navigation bar must display the logo/brand name 'ProfessorConnect' on the left and navigation links (Home, Jobs, About, Contact) on the right. The footer must display '© 2026 ProfessorConnect. All rights reserved.'",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-home-page-with-1-a-hero-section-displaying-professorconnect-as-the-primary-heading-and-find-the-latest-assistant-professor-jobs-in-engineering-and-science-as-the-tagline-plus-a-short-explanation-of-the-platform-s-purpose-and-a-prominent-browse-jobs-call-to-action-button-2-a-how-it-works-or-key-features-section-with-cards-highlighting-latest-faculty-job-listings-easy-job-search-and-centralized-academic-job-portal-3-a-brief-stats-or-highlights-strip-e-g-number-of-live-listings-institutes-covered",
+      "featureTitle": "Build the Home page with: (1) a hero section displaying 'ProfessorConnect' as the primary heading and 'Find the Latest Assistant Professor Jobs in Engineering and Science' as the tagline, plus a short explanation of the platform's purpose and a prominent 'Browse Jobs' call-to-action button; (2) a 'How It Works' or key features section with cards highlighting 'Latest Faculty Job Listings', 'Easy Job Search', and 'Centralized Academic Job Portal'; (3) a brief stats or highlights strip (e.g., number of live listings, institutes covered).",
+      "files": [
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-jobs-page-that-fetches-all-job-listings-from-the-backend-via-the-motoko-actor-display-jobs-in-a-card-grid-layout-each-card-showing-institute-name-position-title-department-location-application-deadline-and-an-apply-now-button-that-opens-the-official-institute-url-in-a-new-tab-include-a-search-bar-for-free-text-search-across-institute-department-position-fields-and-filter-dropdowns-for-institute-department-location-and-position-type-filtering-and-search-must-update-results-in-real-time-without-page-reload",
+      "featureTitle": "Build the Jobs page that fetches all job listings from the backend via the Motoko actor. Display jobs in a card grid layout, each card showing: institute name, position title, department, location, application deadline, and an 'Apply Now' button that opens the official institute URL in a new tab. Include a search bar for free-text search across institute/department/position fields and filter dropdowns for Institute, Department, Location, and Position Type. Filtering and search must update results in real time without page reload.",
+      "files": [
+        "frontend/src/components/JobCard.tsx",
+        "frontend/src/components/JobFilters.tsx",
+        "frontend/src/pages/Jobs.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-about-page-with-sections-covering-1-the-mission-of-professorconnect-and-how-it-simplifies-academic-job-search-2-the-platform-s-target-users-phd-scholars-postdoctoral-researchers-academic-professionals-faculty-seeking-new-opportunities-3-a-future-vision-section-describing-planned-ai-powered-academic-job-matching-cv-upload-automated-job-scraping-and-personalized-notifications-write-all-copy-in-a-professional-academic-tone",
+      "featureTitle": "Build the About page with sections covering: (1) the mission of ProfessorConnect and how it simplifies academic job search; (2) the platform's target users (PhD scholars, postdoctoral researchers, academic professionals, faculty seeking new opportunities); (3) a future vision section describing planned AI-powered academic job matching, CV upload, automated job scraping, and personalized notifications. Write all copy in a professional academic tone.",
+      "files": [
+        "frontend/src/pages/About.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-contact-page-with-a-contact-form-containing-name-email-and-message-fields-with-validation-below-or-beside-the-form-display-a-placeholder-contact-email-e-g-contact-professorconnect-in-the-form-submission-should-show-a-success-confirmation-message-to-the-user-no-real-email-delivery-is-required-at-this-stage",
+      "featureTitle": "Build the Contact page with a contact form containing Name, Email, and Message fields with validation. Below or beside the form, display a placeholder contact email (e.g., contact@professorconnect.in). The form submission should show a success confirmation message to the user. No real email delivery is required at this stage.",
+      "files": [
+        "frontend/src/pages/Contact.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-professional-academic-visual-theme-across-all-pages-primary-palette-of-navy-dark-blue-white-and-dark-gray-clean-sans-serif-typography-with-clear-hierarchy-generous-whitespace-and-minimal-decorative-elements-card-components-with-subtle-shadows-mobile-first-responsive-grid-the-overall-aesthetic-should-feel-like-a-polished-startup-quality-academic-platform",
+      "featureTitle": "Apply a cohesive professional academic visual theme across all pages: primary palette of navy/dark blue, white, and dark gray; clean sans-serif typography with clear hierarchy; generous whitespace and minimal decorative elements; card components with subtle shadows; mobile-first responsive grid. The overall aesthetic should feel like a polished startup-quality academic platform.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-a-logo-mark-image-for-professorconnect-a-minimal-academic-style-icon-combining-a-mortarboard-cap-and-a-search-magnifier-motif-rendered-in-navy-blue-and-white-on-a-transparent-background-suitable-for-use-in-the-navigation-bar",
+      "featureTitle": "Generate a logo mark image for ProfessorConnect: a minimal academic-style icon combining a mortarboard cap and a search/magnifier motif, rendered in navy blue and white on a transparent background, suitable for use in the navigation bar.",
+      "files": [
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-a-hero-background-illustration-for-the-home-page-an-abstract-academic-research-themed-graphic-with-subtle-geometric-shapes-graduation-caps-and-science-engineering-icons-rendered-in-navy-blue-and-light-blue-tones-suitable-as-a-wide-hero-section-background",
+      "featureTitle": "Generate a hero background illustration for the Home page: an abstract academic/research-themed graphic with subtle geometric shapes, graduation caps, and science/engineering icons, rendered in navy blue and light blue tones, suitable as a wide hero section background.",
+      "files": [
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

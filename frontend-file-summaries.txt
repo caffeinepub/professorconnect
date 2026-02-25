@@ -1,0 +1,15 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with four routes (Home, Jobs, About, Contact) using a shared Layout wrapper with Outlet for page content.",
+  "frontend/src/components/Layout.tsx": "Shared layout wrapper that renders the Navigation header at the top, page content via children, and Footer at the bottom.",
+  "frontend/src/components/Navigation.tsx": "Sticky top navigation bar with ProfessorConnect branding, logo image, desktop nav links with active state highlighting, Browse Jobs CTA button, and a mobile hamburger menu.",
+  "frontend/src/components/Footer.tsx": "Three-column footer with brand info, quick links, and contact details, plus copyright line and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/JobCard.tsx": "Individual job listing card displaying institute, position badge, department, location, deadline (with \"closing soon\" warning), and an Apply Now button linking to the official institute URL.",
+  "frontend/src/components/JobFilters.tsx": "Search and filter panel with a text search input and four Select dropdowns (Institute, Department, Location, Position Type) plus a clear-all button when filters are active.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching all jobs (useGetAllJobs), initializing backend seed data (useInitBackend), and adding new jobs (useAddJob).",
+  "frontend/src/pages/Home.tsx": "Home page with hero section (background image, brand name, tagline, CTA), stats strip, features cards, target users grid, and a bottom CTA banner; calls init() on mount to seed backend data.",
+  "frontend/src/pages/Jobs.tsx": "Jobs listing page with page header, JobFilters component, real-time client-side filtering across all four dimensions, responsive card grid, loading skeletons, error alert, and empty state.",
+  "frontend/src/pages/About.tsx": "About page with mission/what-we-do section, target users grid, future vision features (AI matching, CV upload, scraping, notifications), and a commitment banner.",
+  "frontend/src/pages/Contact.tsx": "Contact page with contact info sidebar and a validated contact form (Name, Email, Message) that shows a success confirmation on submission.",
+  "frontend/src/index.css": "Global styles with OKLCH color system defining a professional navy/blue academic palette, custom design tokens for nav/footer/brand/hero, and Inter/Merriweather font imports.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Inter/Merriweather fonts, full custom color palette (brand, nav, footer, section-alt, card-border tokens), custom box shadows, and all standard shadcn/ui tokens."
+}

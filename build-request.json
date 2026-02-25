@@ -1,0 +1,215 @@
+{
+  "kind": "build_request",
+  "title": "ProfessorConnect – Academic Job Portal Website",
+  "projectName": "ProfessorConnect",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a Motoko backend actor that stores faculty job listings with fields: institute name, position title (Assistant Professor / Associate Professor / Professor), department, location, application deadline, and apply URL. Expose query functions to list all jobs, filter jobs by institute/department/location/position type, and admin functions to add, edit, and remove job listings. Seed the actor with at least 10 realistic sample faculty job listings in Engineering and Science departments from Indian institutes (e.g., IITs, NITs, IISc, IISERs).",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Ensure jobs can be easily added, edited, or removed later",
+          "Jobs can be stored in static format or simple database"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores job listings with all required fields",
+        "Query function returns all jobs",
+        "Filter function accepts optional parameters for institute, department, location, and position type and returns matching jobs",
+        "Add, edit, and remove functions are callable",
+        "At least 10 sample listings are seeded on deployment"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a multi-page React frontend with client-side routing for four pages: Home, Jobs, About, and Contact. The top navigation bar must display the logo/brand name 'ProfessorConnect' on the left and navigation links (Home, Jobs, About, Contact) on the right. The footer must display '© 2026 ProfessorConnect. All rights reserved.'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Clean navigation menu at the top",
+          "Display footer text: '© 2026 ProfessorConnect. All rights reserved.'"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation bar is present on all pages with brand name and page links",
+        "Client-side routing works for all four pages without full reload",
+        "Footer with the specified text appears on every page",
+        "Layout is fully mobile responsive"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the Home page with: (1) a hero section displaying 'ProfessorConnect' as the primary heading and 'Find the Latest Assistant Professor Jobs in Engineering and Science' as the tagline, plus a short explanation of the platform's purpose and a prominent 'Browse Jobs' call-to-action button; (2) a 'How It Works' or key features section with cards highlighting 'Latest Faculty Job Listings', 'Easy Job Search', and 'Centralized Academic Job Portal'; (3) a brief stats or highlights strip (e.g., number of live listings, institutes covered).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Display website name 'ProfessorConnect' prominently",
+          "Display tagline below the title",
+          "Professional hero section explaining the purpose of the platform",
+          "Section highlighting key features"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section shows brand name, tagline, and a CTA button",
+        "Key features section displays at least three feature cards",
+        "Page communicates the platform's academic focus clearly"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build the Jobs page that fetches all job listings from the backend via the Motoko actor. Display jobs in a card grid layout, each card showing: institute name, position title, department, location, application deadline, and an 'Apply Now' button that opens the official institute URL in a new tab. Include a search bar for free-text search across institute/department/position fields and filter dropdowns for Institute, Department, Location, and Position Type. Filtering and search must update results in real time without page reload.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Display faculty job listings in a structured table or card format",
+          "Provide search functionality",
+          "Provide filtering options by: Institute, Department, Location, Position type",
+          "Apply link button that redirects to official institute website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Jobs page loads and displays all listings from the backend",
+        "Each card shows all required fields and a working Apply Now button",
+        "Search bar filters results by text in real time",
+        "Dropdown filters for Institute, Department, Location, and Position Type work correctly",
+        "Combining search and filters narrows results correctly"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Build the About page with sections covering: (1) the mission of ProfessorConnect and how it simplifies academic job search; (2) the platform's target users (PhD scholars, postdoctoral researchers, academic professionals, faculty seeking new opportunities); (3) a future vision section describing planned AI-powered academic job matching, CV upload, automated job scraping, and personalized notifications. Write all copy in a professional academic tone.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Explain the mission of ProfessorConnect",
+          "Explain future vision of AI-powered academic job matching",
+          "Write in a professional academic tone"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page contains mission, target users, and future vision sections",
+        "Copy is written in a professional academic tone",
+        "Page layout is clean and readable"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build the Contact page with a contact form containing Name, Email, and Message fields with validation. Below or beside the form, display a placeholder contact email (e.g., contact@professorconnect.in). The form submission should show a success confirmation message to the user. No real email delivery is required at this stage.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Contact form with fields: Name, Email, Message",
+          "Include placeholder contact email"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact form has Name, Email, and Message fields",
+        "Form validates that all fields are filled and email format is valid before submission",
+        "On submission a success message is shown",
+        "Placeholder contact email is displayed on the page"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Apply a cohesive professional academic visual theme across all pages: primary palette of navy/dark blue, white, and dark gray; clean sans-serif typography with clear hierarchy; generous whitespace and minimal decorative elements; card components with subtle shadows; mobile-first responsive grid. The overall aesthetic should feel like a polished startup-quality academic platform.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Modern, minimal, professional academic design",
+          "Use professional academic color scheme (blue, white, dark gray)",
+          "Professional startup-quality appearance",
+          "Clean typography and spacing",
+          "Mobile responsive design"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color scheme consistently uses navy/dark blue, white, and dark gray tones",
+        "Typography is clean and hierarchically structured across all pages",
+        "All pages are fully responsive on mobile, tablet, and desktop",
+        "Cards, buttons, and interactive elements follow a consistent visual style"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Generate a logo mark image for ProfessorConnect: a minimal academic-style icon combining a mortarboard cap and a search/magnifier motif, rendered in navy blue and white on a transparent background, suitable for use in the navigation bar.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Website name must be displayed as 'ProfessorConnect'"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Logo image is placed in frontend/public/assets/generated/",
+        "Logo is rendered in the navigation bar beside the brand name",
+        "Logo is legible at small navigation bar sizes"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Generate a hero background illustration for the Home page: an abstract academic/research-themed graphic with subtle geometric shapes, graduation caps, and science/engineering icons, rendered in navy blue and light blue tones, suitable as a wide hero section background.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Professional hero section explaining the purpose of the platform"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero background image is placed in frontend/public/assets/generated/",
+        "Image is used as the hero section background on the Home page",
+        "Text in the hero section remains legible over the image"
+      ]
+    }
+  ],
+  "constraints": [
+    "Website name must always appear as 'ProfessorConnect' — no personal names in the main branding",
+    "Footer text must read exactly: '© 2026 ProfessorConnect. All rights reserved.'",
+    "All generated images must be served from frontend/public/assets/generated/ — do not route them through the backend",
+    "Do not edit files listed in frontend.immutablePaths"
+  ],
+  "nonGoals": [
+    "User login, authentication, or Internet Identity integration (future phase)",
+    "CV upload functionality (future phase)",
+    "AI-based job matching (future phase)",
+    "Automated job scraping from external sources (future phase)",
+    "Email notification delivery (future phase)",
+    "Admin dashboard UI (future phase)",
+    "International job markets beyond India (future phase)",
+    "Real email sending from the contact form"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimal academic logo mark combining a mortarboard graduation cap and a magnifier/search icon, navy blue and white on transparent background (professor-connect-logo.dim_128x128.png)",
+      "Wide abstract hero background illustration featuring subtle geometric patterns, graduation caps, and science/engineering iconography in navy blue and light blue tones (hero-background.dim_1440x600.png)"
+    ],
+    "edits": []
+  }
+}

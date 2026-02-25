@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "ProfessorConnect - A professional academic job search website for faculty positions in Engineering and Science. Features Home, Jobs, About, and Contact pages. Built as a static single-page application with job listings stored in a JS data file.",
+  "architectural_notes": [
+    "Single-page application using vanilla JS page switching (showPage function)",
+    "Job data stored in data.js as a plain JS array for easy editing without a backend",
+    "Three-file structure: index.html, style.css, data.js, app.js"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimal academic logo mark combining a mortarboard graduation cap and a magnifier/search icon, navy blue and white on transparent background (professor-connect-logo.dim_128x128.png)\n- Wide abstract hero background illustration featuring subtle geometric patterns, graduation caps, and science/engineering iconography in navy blue and light blue tones (hero-background.dim_1440x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-multi-page-react-frontend-with-client-side-routing-for-four-pages-home-jobs-about-and-contact-the-top-navigation-bar-must-display-the-logo-brand-name-professorconnect-on-the-left-and-navigation-links-home-jobs-about-contact-on-the-right-the-footer-must-display-2026-professorconnect-all-rights-reserved",
+      "title": "Implement a multi-page React frontend with client-side routing for four pages: Home, Jobs, About, and Contact. The top navigation bar must display the logo/brand name 'ProfessorConnect' on the left and navigation links (Home, Jobs, About, Contact) on the right. The footer must display '© 2026 ProfessorConnect. All rights reserved.'",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-with-1-a-hero-section-displaying-professorconnect-as-the-primary-heading-and-find-the-latest-assistant-professor-jobs-in-engineering-and-science-as-the-tagline-plus-a-short-explanation-of-the-platform-s-purpose-and-a-prominent-browse-jobs-call-to-action-button-2-a-how-it-works-or-key-features-section-with-cards-highlighting-latest-faculty-job-listings-easy-job-search-and-centralized-academic-job-portal-3-a-brief-stats-or-highlights-strip-e-g-number-of-live-listings-institutes-covered",
+      "title": "Build the Home page with: (1) a hero section displaying 'ProfessorConnect' as the primary heading and 'Find the Latest Assistant Professor Jobs in Engineering and Science' as the tagline, plus a short explanation of the platform's purpose and a prominent 'Browse Jobs' call-to-action button; (2) a 'How It Works' or key features section with cards highlighting 'Latest Faculty Job Listings', 'Easy Job Search', and 'Centralized Academic Job Portal'; (3) a brief stats or highlights strip (e.g., number of live listings, institutes covered).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-jobs-page-that-fetches-all-job-listings-from-the-backend-via-the-motoko-actor-display-jobs-in-a-card-grid-layout-each-card-showing-institute-name-position-title-department-location-application-deadline-and-an-apply-now-button-that-opens-the-official-institute-url-in-a-new-tab-include-a-search-bar-for-free-text-search-across-institute-department-position-fields-and-filter-dropdowns-for-institute-department-location-and-position-type-filtering-and-search-must-update-results-in-real-time-without-page-reload",
+      "title": "Build the Jobs page that fetches all job listings from the backend via the Motoko actor. Display jobs in a card grid layout, each card showing: institute name, position title, department, location, application deadline, and an 'Apply Now' button that opens the official institute URL in a new tab. Include a search bar for free-text search across institute/department/position fields and filter dropdowns for Institute, Department, Location, and Position Type. Filtering and search must update results in real time without page reload.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-about-page-with-sections-covering-1-the-mission-of-professorconnect-and-how-it-simplifies-academic-job-search-2-the-platform-s-target-users-phd-scholars-postdoctoral-researchers-academic-professionals-faculty-seeking-new-opportunities-3-a-future-vision-section-describing-planned-ai-powered-academic-job-matching-cv-upload-automated-job-scraping-and-personalized-notifications-write-all-copy-in-a-professional-academic-tone",
+      "title": "Build the About page with sections covering: (1) the mission of ProfessorConnect and how it simplifies academic job search; (2) the platform's target users (PhD scholars, postdoctoral researchers, academic professionals, faculty seeking new opportunities); (3) a future vision section describing planned AI-powered academic job matching, CV upload, automated job scraping, and personalized notifications. Write all copy in a professional academic tone.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-contact-page-with-a-contact-form-containing-name-email-and-message-fields-with-validation-below-or-beside-the-form-display-a-placeholder-contact-email-e-g-contact-professorconnect-in-the-form-submission-should-show-a-success-confirmation-message-to-the-user-no-real-email-delivery-is-required-at-this-stage",
+      "title": "Build the Contact page with a contact form containing Name, Email, and Message fields with validation. Below or beside the form, display a placeholder contact email (e.g., contact@professorconnect.in). The form submission should show a success confirmation message to the user. No real email delivery is required at this stage.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-professional-academic-visual-theme-across-all-pages-primary-palette-of-navy-dark-blue-white-and-dark-gray-clean-sans-serif-typography-with-clear-hierarchy-generous-whitespace-and-minimal-decorative-elements-card-components-with-subtle-shadows-mobile-first-responsive-grid-the-overall-aesthetic-should-feel-like-a-polished-startup-quality-academic-platform",
+      "title": "Apply a cohesive professional academic visual theme across all pages: primary palette of navy/dark blue, white, and dark gray; clean sans-serif typography with clear hierarchy; generous whitespace and minimal decorative elements; card components with subtle shadows; mobile-first responsive grid. The overall aesthetic should feel like a polished startup-quality academic platform.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-logo-mark-image-for-professorconnect-a-minimal-academic-style-icon-combining-a-mortarboard-cap-and-a-search-magnifier-motif-rendered-in-navy-blue-and-white-on-a-transparent-background-suitable-for-use-in-the-navigation-bar",
+      "title": "Generate a logo mark image for ProfessorConnect: a minimal academic-style icon combining a mortarboard cap and a search/magnifier motif, rendered in navy blue and white on a transparent background, suitable for use in the navigation bar.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-hero-background-illustration-for-the-home-page-an-abstract-academic-research-themed-graphic-with-subtle-geometric-shapes-graduation-caps-and-science-engineering-icons-rendered-in-navy-blue-and-light-blue-tones-suitable-as-a-wide-hero-section-background",
+      "title": "Generate a hero background illustration for the Home page: an abstract academic/research-themed graphic with subtle geometric shapes, graduation caps, and science/engineering icons, rendered in navy blue and light blue tones, suitable as a wide hero section background.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a Motoko backend actor that stores faculty job listings with fields: institute name, position title (Assistant Professor / Associate Professor / Professor), department, location, application deadline, and apply URL. Expose query functions to list all jobs, filter jobs by institute/department/location/position type, and admin functions to add, edit, and remove job listings. Seed the actor with at least 10 realistic sample faculty job listings in Engineering and Science departments from Indian institutes (e.g., IITs, NITs, IISc, IISERs).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "ProfessorConnect",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,107 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T09:29:55.367Z",
+  "summary": "The diff implements most requirements well: a Motoko backend with job listings, a React frontend with four pages, navigation, footer, hero section, job cards with filters, about/contact pages, and a cohesive visual theme. However, the footer copyright year is dynamically generated rather than the hard-coded '2026' required by constraints. The backend lacks a dedicated filter query function. Edit and remove admin functions are not visible. Generated image files are not confirmed in the diff. NITs/IISERs are absent from seed data.",
+  "missing_requirements": [
+    {
+      "requirement": "Footer text must read exactly '© 2026 ProfessorConnect. All rights reserved.' with the literal year 2026, not dynamically generated",
+      "reason": "Footer.tsx uses new Date().getFullYear() which currently outputs 2025, not the hard-coded 2026 required by the constraint",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "id": "REQ-1",
+      "requirement": "Filter function accepting optional parameters for institute, department, location, and position type as a backend query function",
+      "reason": "The diff shows getAllJobs and addJob but no filterJobs backend query function with optional parameters is visible; filtering is done entirely client-side",
+      "evidence": [
+        "frontend/src/hooks/useQueries.ts",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-1",
+      "requirement": "Admin functions to edit and remove job listings must be callable",
+      "reason": "The visible backend code and useQueries.ts only show addJob; editJob and removeJob functions are not present in the diff",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "id": "REQ-1",
+      "requirement": "At least 10 realistic sample listings from diverse Indian institutes including NITs and IISERs",
+      "reason": "All 10 seed jobs are from only IIT Bombay, IIT Delhi, IIT Madras, and IISc — no NITs or IISERs are represented",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "requirement": "Logo image file placed at frontend/public/assets/generated/professor-connect-logo.dim_128x128.png",
+      "reason": "No image file is added to frontend/public/assets/generated/ in the diff; the file is referenced in Navigation.tsx but not confirmed as added",
+      "evidence": [
+        "frontend/src/components/Navigation.tsx"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Hero background image placed at frontend/public/assets/generated/hero-background.dim_1440x600.png",
+      "reason": "No image file is added to frontend/public/assets/generated/ in the diff; the file is referenced in Home.tsx but not confirmed as added",
+      "evidence": [
+        "frontend/src/pages/Home.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "caffeine.ai attribution link with UTM tracking parameters added to the footer",
+      "reason": "The build request does not mention any caffeine.ai branding, attribution, or UTM tracking in the footer",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Internet Identity and AuthClient provider and authentication hooks integrated into the app",
+      "reason": "User login and Internet Identity integration is explicitly listed as a non-goal for this phase, yet InternetIdentityProvider wraps the entire app and useInternetIdentity hook is fully implemented",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Dark mode CSS variables and theme defined in index.css",
+      "reason": "The build request specifies a navy/dark blue, white, and dark gray palette but does not request dark mode support",
+      "evidence": [
+        "frontend/src/index.css"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/JobCard.tsx",
+    "frontend/src/components/JobFilters.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/About.tsx",
+    "frontend/src/pages/Contact.tsx",
+    "frontend/src/pages/Home.tsx",
+    "frontend/src/pages/Jobs.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
